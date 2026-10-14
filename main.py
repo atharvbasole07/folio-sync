@@ -205,7 +205,8 @@ def main():
         print("1. Log a new Investment/Trade")
         print("2. View my Portfolio")
         print("3. Show overall Profit or Loss")
-        print("4. Exit")
+        print("4. Show Profit or Loss for a specific Asset")
+        print("5. Exit")
 
         choice = get_number_input("\nWhat would you like to do? (1/2/3/4): ")
         if choice == 1:
@@ -257,9 +258,14 @@ def main():
                 continue
         elif choice == 2:
             print(vault.view_portfolio())
+        elif choice == 3:
+            print(vault.show_profit_loss())
         elif choice == 4:
-            print("Folio_Sync Closed!")
+            print("Profit or Loss for a specific Asset feature is under development.")
             break
+        elif choice == 5:
+            print("Profit or Loss feature is under development.")
+        
         else:
             print("Error: Select Valid option.")
             continue
